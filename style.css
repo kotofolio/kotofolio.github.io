@@ -1,0 +1,312 @@
+/* style comum */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+* {
+    font-size: 32px;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.display {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    border: none;
+    height: 80px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+   
+}
+
+.digits {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    height: 200px;
+    padding: 5px;
+    border-radius: 10px 10px 0 0;
+}
+
+.button {
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.buttoncontent {
+    border: none;
+}
+
+.buttonresult {
+    width: 50%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+}
+
+.buttonreset {
+    width: 50%;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.content {
+    padding: 10px;
+}
+
+.finaldigits {
+    display: flex;
+    gap: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+.displaychanger {
+    display: flex;
+    gap: 36px;
+    margin-left: 4px;
+}
+
+.box-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.circle {
+    display: block;
+    position: absolute;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    transition: ease-in-out .4s
+}
+
+.circle-main {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.number {
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.flextwo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.theme {
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.removeclick {
+    pointer-events: none;
+}
+
+/* fim style comum */
+
+/* início dark */
+
+body.dark {
+    background-color: hsl(222, 26%, 31%);
+}
+
+.dark .circle-main {
+    background-color: hsl(223, 31%, 20%);
+}
+
+.dark .circle {
+    background-color: hsl(6, 63%, 50%);
+    top: 5px;
+    left: 3px;
+}
+
+.dark .title {
+    color: #fff;
+}
+
+.dark .theme {
+    color:#fff;
+}
+
+.dark .number {
+    color: #fff;
+}
+
+.dark .display {
+    background-color: hsl(224, 36%, 15%);
+    color: white;
+}
+
+.dark .button {
+    background-color:  hsl(30, 25%, 89%);
+    border-bottom: 3px solid hsl(28, 16%, 65%);
+    color: hsl(221, 14%, 31%);
+}
+
+.dark .buttoncontent {
+    background-color: hsl(225, 21%, 49%);
+    color: white;
+    border-bottom: 3px solid hsl(224, 28%, 35%);
+}
+
+.dark .buttonresult {
+    color: #fff;
+    background-color: hsl(6, 63%, 50%);
+    border-bottom: 3px solid hsl(6, 70%, 34%);
+}
+
+
+.dark .content {
+    background-color: hsl(223, 31%, 20%);
+}
+
+/* fim dark */
+
+/* início light */
+
+body.light {
+    background-color: hsl(0, 0%, 90%);
+}
+
+.light .circle-main {
+    background-color:  hsl(0, 5%, 81%);
+}
+
+.light .circle {
+    background-color: hsl(25, 98%, 40%);
+    left: 38px;
+}
+
+.light .title {
+    color: hsl(60, 10%, 19%);
+}
+
+.light .theme {
+    color: hsl(60, 10%, 19%);
+}
+
+.light .number {
+    color: #000;
+}
+
+.light .display {
+    background-color: hsl(0, 0%, 93%);
+    color: hsl(60, 10%, 19%);
+}
+
+.light .button {
+    background-color:  hsl(30, 25%, 89%);
+    border-bottom: 3px solid hsl(28, 16%, 65%);
+    color: hsl(221, 14%, 31%);
+}
+
+.light .buttoncontent {
+    background-color: hsl(185, 42%, 37%);
+    color: white;
+    border-bottom: 3px solid hsl(185, 58%, 25%);
+}
+
+.light .buttonresult {
+    color: #fff;
+    background-color: hsl(25, 98%, 40%);
+    border-bottom: 3px solid hsl(25, 99%, 27%);
+}
+
+
+.light .content {
+    background-color:  hsl(0, 5%, 81%);
+}
+
+/* fim light */
+
+/* início neon */
+
+body.neon {
+    background-color: hsl(268, 75%, 9%);
+}
+
+.neon .title {
+    color: hsl(52, 100%, 62%);
+}
+
+.neon .theme {
+    color: hsl(52, 100%, 62%);
+}
+
+.neon .circle-main {
+    background-color:  hsl(268, 71%, 12%);
+}
+
+.neon .circle {
+    background-color: hsl(176, 100%, 44%);
+    left: 78px;
+}
+
+.neon .number {
+    color: hsl(52, 100%, 62%);
+}
+
+.neon .display {
+    background-color: hsl(268, 71%, 12%);
+    color: hsl(52, 100%, 62%);
+}
+
+.neon .button {
+    background-color:  hsl(268, 47%, 21%);
+    border-bottom: 3px solid hsl(290, 70%, 36%);
+    color: hsl(52, 100%, 62%);
+}
+
+.neon .buttoncontent {
+    background-color: hsl(290, 70%, 36%);
+    color: white;
+    border-bottom: 3px solid hsl(285, 91%, 52%);
+}
+
+.neon .buttonresult {
+    color: #fff;
+    background-color: hsl(176, 100%, 44%);
+    border-bottom: 3px solid hsl(177, 92%, 70%);
+}
+
+
+.neon .content {
+    background-color:  hsl(268, 75%, 9%);
+}
+
+/* fim neon */
+
